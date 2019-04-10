@@ -754,7 +754,7 @@
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBl-rC-xnz">
                                 <rect key="frame" x="10" y="10" width="580" height="904"/>
                                 <subviews>
-                                    <box title="CSV from WWB" translatesAutoresizingMaskIntoConstraints="NO" id="TqJ-xd-hbP" userLabel="BOX: CSV from WWB">
+                                    <box title="WWB source" translatesAutoresizingMaskIntoConstraints="NO" id="TqJ-xd-hbP" userLabel="BOX: CSV from WWB">
                                         <rect key="frame" x="-3" y="840" width="586" height="64"/>
                                         <view key="contentView" id="VxN-cQ-m4R">
                                             <rect key="frame" x="2" y="2" width="582" height="47"/>
