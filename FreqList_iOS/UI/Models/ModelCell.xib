@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModelsVC" customModule="FreqList_for_iOS" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="j1X-pK-pFj" customClass="ModelCell" customModule="FreqList_for_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j1X-pK-pFj" id="Aa1-xp-RlP">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vEd-mG-jwn" userLabel="Cell Stack View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJx-9b-OMD" userLabel="Left Color View">
+                                <rect key="frame" x="0.0" y="0.0" width="16" height="65.5"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="qqe-ri-UAH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qra-5A-CSF" userLabel="Left Spacer View">
+                                <rect key="frame" x="16" y="0.0" width="2" height="65.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="DWe-Vb-12x"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ECV-06-s0R" userLabel="Label Stack View">
+                                <rect key="frame" x="18" y="9.5" width="297" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="TRN-fW-Erd">
+                                        <rect key="frame" x="0.0" y="0.0" width="47.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Gry-lh-moq">
+                                        <rect key="frame" x="0.0" y="20.5" width="126" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijO-y3-4U8" userLabel="Check View" customClass="UIControl">
+                                <rect key="frame" x="315" y="0.0" width="60" height="65.5"/>
+                                <subviews>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAT-nM-LqK" customClass="CheckButton" customModule="FreqList_for_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="8" width="30" height="48"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
+                                        <state key="normal" title="✓"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uAT-nM-LqK" firstAttribute="centerY" secondItem="ijO-y3-4U8" secondAttribute="centerY" id="96M-rt-ihc"/>
+                                    <constraint firstAttribute="width" constant="60" id="EXb-le-yBr"/>
+                                    <constraint firstItem="uAT-nM-LqK" firstAttribute="centerX" secondItem="ijO-y3-4U8" secondAttribute="centerX" constant="-3" id="T9z-ge-zH7"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="checkButtonPressed" destination="j1X-pK-pFj" eventType="touchUpInside" id="6Xe-tK-6BR"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ijO-y3-4U8" secondAttribute="bottom" id="ELw-wp-Y7l"/>
+                            <constraint firstItem="ijO-y3-4U8" firstAttribute="top" secondItem="vEd-mG-jwn" secondAttribute="top" id="K67-Ox-C9s"/>
+                            <constraint firstItem="CJx-9b-OMD" firstAttribute="top" secondItem="vEd-mG-jwn" secondAttribute="top" id="aai-8O-7cT"/>
+                            <constraint firstAttribute="bottom" secondItem="CJx-9b-OMD" secondAttribute="bottom" id="r4H-f6-zo3"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="vEd-mG-jwn" secondAttribute="trailing" id="GKl-ZC-FGI"/>
+                    <constraint firstAttribute="bottom" secondItem="vEd-mG-jwn" secondAttribute="bottom" id="S5I-am-jn6"/>
+                    <constraint firstItem="vEd-mG-jwn" firstAttribute="top" secondItem="Aa1-xp-RlP" secondAttribute="top" id="cr1-a5-DVf"/>
+                    <constraint firstItem="vEd-mG-jwn" firstAttribute="leading" secondItem="Aa1-xp-RlP" secondAttribute="leading" id="gmE-L1-TAl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="BDc-KL-ux9"/>
+            <connections>
+                <outlet property="checkButton" destination="uAT-nM-LqK" id="J50-Eh-U8s"/>
+                <outlet property="leftColorView" destination="CJx-9b-OMD" id="QHY-Xe-1bR"/>
+                <outlet property="nameLabel" destination="Gry-lh-moq" id="Ddq-aa-idB"/>
+                <outlet property="smallerLabel" destination="TRN-fW-Erd" id="W5b-hS-Cvo"/>
+            </connections>
+            <point key="canvasLocation" x="-150.5" y="-61"/>
+        </tableViewCell>
+    </objects>
+</document>

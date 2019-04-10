@@ -1,0 +1,22 @@
+iOS TODO:
+
+- App icons
+
+
+FEATURES
+- truncate-middle modelname in navbar
+- use backups from csv ?
+    - different model names (ie.: "ULXD4" vs "ULXD/Standard", or "UR4D" vs "UHFR")
+- make zone name label a button -> show zone.allChannels
+- show something (choose model, open file from some source, etc...) when list are empty
+    - could include Demo button
+
+- PROJECTS IDEA:
+    - save all files locally
+        - convert any CSV/XML/etc to FLXML
+        - store/use FLXML only OR keep source also ?
+    - name them Projects
+    - make ProjectsVC, put it before ModelsVC
+    - if opened from other app, start in ModelsVC
+    - if opened directly, start in ProjectsVC
+    - instead of Demo button, include a Demo project in the list
