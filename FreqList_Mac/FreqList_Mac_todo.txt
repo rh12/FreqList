@@ -3,3 +3,4 @@ Mac TODO:
 - .CSV integration in macOS ?
 - Model column if only Zone is selected ?
 - Clipboard: make (only!) textBG a bit darker (to show possible whitespaces)
+- display WWB colors ?
