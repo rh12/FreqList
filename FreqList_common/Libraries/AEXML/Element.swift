@@ -91,7 +91,7 @@ open class AEXMLElement {
         - returns: Optional Array of found XML elements.
     */
     open func all(withValue value: String) -> [AEXMLElement]? {
-        let found = all?.flatMap {
+        let found = all?.compactMap {
             $0.value == value ? $0 : nil
         }
         return found
@@ -105,7 +105,7 @@ open class AEXMLElement {
         - returns: Optional Array of found XML elements.
     */
     open func all(containingAttributeKeys keys: [String]) -> [AEXMLElement]? {
-        let found = all?.flatMap { element in
+        let found = all?.compactMap { element in
             keys.reduce(true) { (result, key) in
                 result && Array(element.attributes.keys).contains(key)
             } ? element : nil
@@ -122,7 +122,7 @@ open class AEXMLElement {
     */
     open func all(withAttributes attributes: [String : String]) -> [AEXMLElement]? {
         let keys = Array(attributes.keys)
-        let found = all(containingAttributeKeys: keys)?.flatMap { element in
+        let found = all(containingAttributeKeys: keys)?.compactMap { element in
             attributes.reduce(true) { (result, attribute) in
                 result && element.attributes[attribute.key] == attribute.value
             } ? element : nil
@@ -234,7 +234,7 @@ open class AEXMLElement {
     }
     
     fileprivate func removeChild(_ child: AEXMLElement) {
-        if let childIndex = children.index(where: { $0 === child }) {
+        if let childIndex = children.firstIndex(where: { $0 === child }) {
             children.remove(at: childIndex)
         }
     }
@@ -312,7 +312,7 @@ open class AEXMLElement {
 public extension String {
     
     /// String representation of self with XML special characters escaped.
-    public var xmlEscaped: String {
+    var xmlEscaped: String {
         // we need to make sure "&" is escaped first. Not doing this may break escaping the other characters
         var escaped = replacingOccurrences(of: "&", with: "&amp;", options: .literal)
         

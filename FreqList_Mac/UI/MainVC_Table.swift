@@ -122,7 +122,7 @@ extension MainVC: NSTableViewDelegate {
         }
 
         // update selection
-        if let i = channelsTableView.tableColumns.index(where: { $0.title == selectedLabel }) {
+        if let i = channelsTableView.tableColumns.firstIndex(where: { $0.title == selectedLabel }) {
             copySelectorSC.setSelected(true, forSegment: i)
         }
     }

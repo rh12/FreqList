@@ -21,6 +21,7 @@ class MainVC: NSViewController {
     var project: Project = Project()
     weak var selectedZone: Zone?
     weak var selectedModel: Model?
+    var sourceFile: URL?
     
     // misc
     var isInitialAppearance: Bool = true
@@ -85,6 +86,11 @@ class MainVC: NSViewController {
             }
         }
     }
+    
+    @IBAction func reloadClicked(_ sender: Any) {
+        guard let url = sourceFile else { return }
+        openFile(url)
+    }
 
     // --------------------------------------------------------------------------------------------
     
@@ -119,6 +125,7 @@ class MainVC: NSViewController {
             
             // set as current project only, if there was no error
             project = newProject
+            sourceFile = url
 
             // present data
             fileTFCell.stringValue = url.path

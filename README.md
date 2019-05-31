@@ -25,7 +25,7 @@ You share the coordination file (via AirDrop, email or any other way), and FreqL
 - check/uncheck all button to quickly ignore controlled or unimportant models
 
 ### Requirements
-- Xcode 9.2+ to build
+- Xcode 10.2.1+ to build
 - iPhone or iPad running iOS 11.2+
 <br><br>
 
@@ -48,7 +48,7 @@ You can open the WWB coordination file FreqList, which provides a structured lis
   - LEFT/RIGHT arrows change selected (copied) text
 
 ### Requirements
-- Xcode 9.2+ to build
+- Xcode 10.2.1+ to build
 - macOS 10.11+ to run
 <br><br>
 

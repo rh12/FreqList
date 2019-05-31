@@ -16,7 +16,7 @@ class CheckButton: UIButton {
         }
     }
     
-    var states: [State:StateConfig] = [:]
+    var states: [ButtonState:StateConfig] = [:]
     
     var rectSize: CGFloat = 34.0
     var fontSize: CGFloat = 30.0
@@ -56,7 +56,7 @@ class CheckButton: UIButton {
         layer.borderColor = AC.color.CheckButton.border.cgColor
         layer.cornerRadius = 6.0
 
-        for state in State.allCases {
+        for state in ButtonState.allCases {
             // set state-dependent attributes
             var textColor: UIColor
             var bgColor: UIColor
@@ -70,7 +70,7 @@ class CheckButton: UIButton {
             }
             
             // setup Title
-            let attrDict: [NSAttributedStringKey : Any] = [
+            let attrDict: [NSAttributedString.Key : Any] = [
                 .font: UIFont.italicSystemFont(ofSize: fontSize),
                 .foregroundColor: textColor,
             ]
@@ -118,11 +118,9 @@ class CheckButton: UIButton {
 // --------------------------------------------------------------------------------------------
 
 extension CheckButton {
-    enum State {
+    enum ButtonState: CaseIterable {
         case checked
         case unchecked
-        
-        static let allCases: [State] = [.checked, .unchecked]
     }
     
     struct StateConfig {

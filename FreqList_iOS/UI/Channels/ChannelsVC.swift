@@ -191,7 +191,7 @@ class ChannelsVC: UITableViewController {
         // reorder rows
         tableView.performBatchUpdates({
             for newIndex in 0..<newList.count {
-                let oldIndex = oldList.index(of: newList[newIndex])
+                let oldIndex = oldList.firstIndex(of: newList[newIndex])
                 if let oldIndex = oldIndex, oldIndex != newIndex {
                     tableView.moveRow(at: IndexPath(row: oldIndex, section: 0),
                                       to: IndexPath(row: newIndex, section: 0))

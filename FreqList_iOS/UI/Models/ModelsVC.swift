@@ -158,7 +158,7 @@ class ModelsVC: UITableViewController {
         guard let model = model else { return }
 
         for (section, zone) in zones.enumerated() {
-            if let row = zone.models.index(of: model) {
+            if let row = zone.models.firstIndex(of: model) {
                 let ip = IndexPath(row: row, section: section)
                 
                 if let cell = tableView.cellForRow(at: ip) as? ModelCell {
